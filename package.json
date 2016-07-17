@@ -1,0 +1,43 @@
+{
+  "name": "meanie-passport-refresh-strategy",
+  "description": "A collection of error middleware handlers for use with Meanie Express Seed projects",
+  "version": "1.0.0",
+  "homepage": "https://github.com/meanie/passport-refresh-strategy",
+  "author": {
+    "name": "Adam Buczynski",
+    "email": "me@adambuczynski.com",
+    "url": "http://adambuczynski.com/"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meanie/passport-refresh-strategy"
+  },
+  "bugs": {
+    "url": "https://github.com/meanie/passport-refresh-strategy/issues"
+  },
+  "keywords": [
+    "meanie",
+    "express",
+    "passport",
+    "strategy",
+    "refresh",
+    "token"
+  ],
+  "engines": {
+    "node": ">=6.3.0",
+    "npm": ">=3.10.3"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "dependencies": {
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1"
+  }
+}
