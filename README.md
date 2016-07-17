@@ -20,7 +20,31 @@ npm install meanie-passport-refresh-strategy --save
 
 ## Usage
 
-See the [Meanie Express Seed](https://github.com/meanie/express-seed) for usage.
+```js
+//Dependencies
+let passport = require('passport');
+let RefreshStrategy = require('meanie-passport-refresh-strategy');
+
+//Setup strategy (where `User` is your custom user service)
+passport.use(new RefreshStrategy((refreshToken, cb) => {
+
+  //No refresh token?
+  if (!refreshToken) {
+    return cb(null, false);
+  }
+
+  //Validate token
+  tokens.validate('refresh', refreshToken)
+    .then(User.findByTokenPayload)
+    .then(user => {
+      if (!user) {
+        throw new InvalidTokenError('No matching user found');
+      }
+      return cb(null, user);
+    })
+    .catch(cb);
+}));
+```
 
 ## Issues & feature requests
 

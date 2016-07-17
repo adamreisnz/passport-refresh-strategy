@@ -1,6 +1,6 @@
 {
   "name": "meanie-passport-refresh-strategy",
-  "description": "A collection of error middleware handlers for use with Meanie Express Seed projects",
+  "description": "A refresh token authentication strategy for Passport, for use with Meanie Express Seed projects",
   "version": "1.0.0",
   "homepage": "https://github.com/meanie/passport-refresh-strategy",
   "author": {
