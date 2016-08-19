@@ -3,8 +3,8 @@
 /**
  * Dependencies
  */
-let util = require('util');
-let Strategy = require('passport-strategy');
+const util = require('util');
+const Strategy = require('passport-strategy');
 
 /**
  * Define refresh token strategy
@@ -51,7 +51,7 @@ RefreshStrategy.prototype.authenticate = function(req) {
       return this.fail('invalid_token', info);
     }
     this.success(user, info);
-  });
+  }, req);
 };
 
 /**
