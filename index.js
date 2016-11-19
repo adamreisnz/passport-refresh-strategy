@@ -33,13 +33,8 @@ util.inherits(RefreshStrategy, Strategy);
  */
 RefreshStrategy.prototype.authenticate = function(req) {
 
-  //Initialize vars
-  let refreshToken;
-
   //Get refresh token from cookies
-  if (req.cookies.refreshToken) {
-    refreshToken = req.cookies.refreshToken;
-  }
+  const refreshToken = req.cookies.refreshToken || null;
 
   //Call verify handler
   this._verify(refreshToken, (error, user, info) => {
