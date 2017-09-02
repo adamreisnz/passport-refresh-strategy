@@ -1,15 +1,18 @@
 {
-  "name": "meanie-passport-refresh-strategy",
-  "description": "A refresh token authentication strategy for Passport, for use with Meanie Express Seed projects",
-  "version": "1.2.0",
+  "name": "@meanie/passport-refresh-strategy",
+  "description": "A refresh token authentication strategy for Passport",
+  "version": "2.0.0",
   "homepage": "https://github.com/meanie/passport-refresh-strategy",
   "author": {
     "name": "Adam Reis",
     "email": "adam@reis.nz",
-    "url": "http://adam.reis.nz/"
+    "url": "https://adam.reis.nz/"
   },
   "contributors": [],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/meanie/passport-refresh-strategy"
@@ -26,18 +29,13 @@
     "token"
   ],
   "engines": {
-    "node": ">=6.3.0",
-    "npm": ">=3.10.3"
+    "node": ">=8"
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
     "passport-strategy": "^1.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^2.13.1"
   }
 }
