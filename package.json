@@ -1,7 +1,7 @@
 {
   "name": "@meanie/passport-refresh-strategy",
   "description": "A refresh token authentication strategy for Passport",
-  "version": "4.0.0",
+  "version": "3.0.0",
   "homepage": "https://github.com/meanie/passport-refresh-strategy",
   "author": {
     "name": "Adam Reis",
