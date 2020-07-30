@@ -35,7 +35,8 @@ class RefreshStrategy extends Strategy {
   authenticate(req) {
 
     //Get refresh token hash from cookies
-    const hash = req.cookies.refreshToken;
+    const key = req.refreshTokenKey || 'refreshToken';
+    const hash = req.cookies[key];
 
     //Get access token from headers
     const auth = req.header('Authorization');
